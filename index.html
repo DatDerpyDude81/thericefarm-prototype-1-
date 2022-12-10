@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<!-- the skeleton, or base of the rice farming game -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Peasant Liu's Rice Farming Simulator</title> <!-- in honor of giuseppe, or Jonathan Liu -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/riceicon.png" />
+</head>
+
+<body>
+  <div id="startup">
+    <h1>Welcome to Peasant Liu's Rice Farming Simulator!</h1> <!-- in honor of giuseppe, or Jonathan Liu -->
+    <p>Click any where to continue</p>
+  </div>
+
+  <div id="game">
+    <button onclick="
+  alert(`How the game works: 
+  
+You are a farmer trying to farm rice! Click on any grid to plant 1 rice plant. 
+  
+To plant, it will cost you 1 seed and 1 liter of water. 
+  
+After 5 seconds, you may harvest that rice. Harvested rice can be sold for 1元 per 4 harvested rice. 
+      
+Buy more rice seeds in the market to plant! You will have a chance to get 0, 1, 2, 4, or 40000 rice per harvest, with the following chances: 
+0: ~0.6%
+1: ~2%
+2: ~94%
+4: ~3%
+40000: ~0.04%
+        
+You can purchase more seeds, water, or fertilizer, or you can sell your rice. 
+
+Fertilizer notes: Fertilizer can be used to boost the time it takes for your rice to harvest by 3 seconds. It costs 2元 for 1 fertilizer, and when you plant a rice, the fertilizer usage can be activated or not activated. If there is no fertilizer available (in your inventory), then fertilizer use would automatically be disabled.
+
+Your data is automatically saved every 3 minutes, but you can manually save with a button up top.
+        
+Have fun farming!`)
+">show instructions (suggested read)</button>
+    <button id="delete">clear all data</button>
+    <button onclick="alert(`Some words left by Peasant Liu:
+    
+    The absence of such automated farming system is to teach the value of hard work in us farmers, even when our hands may dry up, even when our chi is gone, and even when your keyboard may be broken. Another value that is quite useful in my life is when farming, do not get distracted or spend time on useless things (like this game haha). Thank you, and 谢谢。
+    
+    -Peasant Liu`)">show words of wisdom</button>
+    <button onclick="alert(`Credits:
+giuseppe is a nickname for a Chinese friend of mine, who was involved heavily in the development of this game!
+In honer of 'giuseppe', the game is named after his last name, Liu.
+
+*Game is 'based' on a 'true' story*
+
+Inspiration: giuseppe
+Where the idea came from: giuseppe
+Farmer of honor: giuseppe
+Made by: not giuseppe`)">show credits</button>
+    <button id="manualsave">(manually) save data</button>
+    <button onclick="alert('Remember to download a new version occasionally for newest updates!');window.open('https://replit.com/@edjiang1234/thericefarm.zip', '_blank')">Offline version download</button>
+<br><br>
+    <div class="tiles">
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button><br>
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button><br>
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button>
+      <button class="tile"></button>
+    </div>
+    <p id="seedamount">Seeds left: </p>
+    <p id="water">Water left: </p>
+    <p id="money">Money: 元</p>
+    <p id="riceamount">Rice: </p><button id="sell">*SELL HARVESTED RICE*</button>
+    <p id="fertilizer">Fertilizer: </p><button id="usefert">Activate fertilizer</button><button id="notusefert" disabled>Deactivated</button>
+    <hr>
+    <div class="shop">
+      <p>The Local Farmer's Market:</p>
+      <button id="buyplain">Buy plain rice seeds (4 for 1元)</button><br><br>
+      <button id="buywater">Buy water (2 for 1元)</button><br><br>
+      <button id="buyboost">Fertilizer (1 for 2元)</button><br>
+
+    
+    </div>
+    
+
+    
+    <div id="dialogs"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

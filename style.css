@@ -1,0 +1,161 @@
+/* styles needed for the rice farming game */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=La+Belle+Aurore&family=Nunito:wght@300&family=Press+Start+2P&family=Source+Code+Pro:ital,wght@1,300&family=Zen+Dots&display=swap');
+
+html {
+  width: 100%;
+  height: 100%;
+  background: url('/img/startbackground.png')no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Nunito, monospace;
+}
+
+button {
+  font-family: Nunito, sans-serif;
+  padding: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+
+button:active {
+  transform: translateY(-5px);
+  transition: 0.1s;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  transform: none;
+  transition: none;
+}
+
+hr {
+  height: 2px;
+  background-color: black;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width:100%;
+  overflow-wrap:break-word;
+}
+
+#startup {
+  font-family:Zen Dots, monospace;
+  text-align:center;
+  animation-name: bigin;
+  animation-duration: 0.5s;
+  position:relative;
+}
+
+
+#game {
+  display:none;
+  margin:auto;
+  font-family: Zen Dots, monospace;
+  text-align:center;
+}
+
+
+.tile {
+  font-family: Zen Dots, monospace;
+  text-align:center;
+  display: inline-block;
+  margin: 7px;
+  background-image: url('/img/emptysoil.jpg');
+  background-position: 63% 37%;
+  width: 1in;
+  height: 1in;
+  vertical-align: top;
+  border: 1px solid #641e1e;
+  border-radius: 10px;
+  cursor: pointer;
+  animation-name: shadowfade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.tile:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+
+.tile:active {
+  transform: translateY(-5px);
+  transition: 0.1s;
+}
+
+.shop {
+  text-align:center;
+}
+
+.shop button {
+  border: 1px solid black;
+  padding: 10px;
+  font-family: Zen Dots, monospace;
+  border-radius: 10px;
+  cursor:pointer;
+  animation-name: shadowfade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+}
+.shop button:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+.shop button:active {
+  transform: translateY(-5px);
+  transition: 0.1s;
+}
+
+#buywater {
+  background-image: url("/img/ricewater.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#buyplain {
+  background-image: url("/img/riceseeds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#buyboost {
+  background-image: url("/img/fertilizer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#dialogs {
+  display:inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes fadein {from {opacity: 0; }to{ opacity: 1; }}
+@keyframes fadeout {from{opacity:0.9;}to{opacity:0;}}
+@keyframes fadeoutother {from{opacity:1;}to{opacity: 0;}}
+@keyframes fadeinout {0% {opacity:1}50% {opacity: 0;}100%{opacity:1;}}
+@keyframes bigin {from{scale:2;}to{scale:1}}
+@keyframes shadowfade {0%{box-shadow: #000 0px 0px 0px;}50%{box-shadow: #000 0px 0px 10px;}100%{box-shadow: #000 0px 0px 0px;}1}
+@keyframes biginout {0%{scale:1;} 50%{scale:2;}100%{scale:1;}}
